@@ -23,6 +23,7 @@ nav {
     justify-content: center;
     gap: 20px;
     z-index: 1000;
+    flex-direction: row;  /* Ensure nav links are always horizontal */
 }
 
 nav a {
@@ -37,10 +38,49 @@ nav a:hover {
     background-color: #1d4ed8;
 }
 
+/* Other Sections */
 section {
     padding: 100px 20px;
     max-width: 900px;
     margin: auto;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    #hero {
+        padding: 150px 20px;
+    }
+
+    #hero img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .project-grid {
+        display: block;
+    }
+
+    .project-grid .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        font-size: 0.9em;  /* Smaller font on mobile */
+    }
 }
 
 /* Hero Section */
@@ -215,11 +255,6 @@ section {
 
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
     #hero {
         padding: 150px 20px;
     }
